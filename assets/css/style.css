@@ -1,7 +1,8 @@
 @import url("./global.css");
 
 .menu {
-    height: 3.411rem;
+    width: 93rem;
+    height: 1.911rem;
     display: flex;
     justify-content: space-between;
     padding: 0.75rem 1rem;
@@ -13,8 +14,23 @@
     height: 1.661rem;
 }
 
+.menu_item {
+    text-decoration: none;
+    color: var(--text-color);
+    margin: 1.5rem;
+}
+
+.menu_item--button {
+    width: 162.54px;
+    height: 30.4px;
+    background: var(--tertiary-color);
+    border-radius: 50%;
+    
+}
+
 .header {
-    height: 57.487rem;
+    width: 100%;
+    height: 32.487rem;
     margin-top: 3.125rem;
     padding: 6.25rem 0 18.75rem;
 
@@ -22,14 +38,15 @@
 }
 
 main {
+    width: 100%;
     height: 134.171rem;
 
     background-color: yellow;
 }
 
 .footer {
-    width: 75rem;
-    height: 12.837rem;
+    width: 72rem;
+    height: 9.837rem;
     margin: 0 10rem;
     padding: 1.5rem;
 

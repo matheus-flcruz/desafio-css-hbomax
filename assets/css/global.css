@@ -37,6 +37,8 @@
 }
 
 body {
+    width: 95rem;
+    height: 210.746rem;
     background-color: var(--primary-color);
     color: var(--text-color);
     font-family: "Raleway", sans-serif;

@@ -37,8 +37,8 @@
 }
 
 body {
-    width: 95rem;
-    height: 210.746rem;
+    /* width: 95rem;
+    height: 210.746rem; */
     background-color: var(--primary-color);
     color: var(--text-color);
     font-family: "Raleway", sans-serif;
@@ -47,3 +47,73 @@ body {
     padding: 0;
     display: block;
 }
+
+p {
+    font-family: "Quicksand", sans-serif;
+  }
+
+section {
+    scroll-margin-top: 80px;
+  }
+  
+.text--small {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+/* Navbar */
+
+.menu {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    position: fixed; /* Deixa a Navbar fixa na tela */
+    top: 0; /* Tira a margem do topo */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--nav-bg-color);
+    z-index: 1; /* Deixa a Navbar por cima na hora de rolar a tela */
+}
+
+.menu_logo {
+    max-width: 10rem;
+}
+
+.menu_logo-image {
+    width: 100%;
+}
+
+.menu_item {
+    margin-right: 1.5rem;
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: var(--text-color);
+    text-decoration: none;
+    letter-spacing: 0.125rem;    
+}
+
+.menu_item-button {
+    margin-right: 3.5rem;
+}
+
+/* Button */
+
+.button {
+    padding: 1rem 2.5rem;
+    background-color: var(--tertiary-color);
+    border-radius: 500px;
+    font-weight: 700;
+    color: var(--text-color);
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.button-gradient {
+    background: var(--btn-bg-color-gradient);
+    outline: 3px solid transparent;
+    transition: background 1s, outline 1s, transform 1s;
+    background-size: 250%;
+  }

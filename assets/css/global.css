@@ -117,3 +117,12 @@ section {
     transition: background 1s, outline 1s, transform 1s;
     background-size: 250%;
   }
+
+  /* Container */
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 24px;
+    text-align: center;
+}

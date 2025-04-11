@@ -5,10 +5,23 @@
 
 .header {
     width: 100%;
-    height: 32.487rem;
-    margin-top: 3.125rem;
+    min-height: 100vh;
+    margin-top: 50px;
     padding: 6.25rem 0 18.75rem;
+    position: relative;
+    background: linear-gradient(-45deg, #56125b, #0f0f10, #271e6e);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite alternate;
 }
+
+.header::after {
+    content: "";
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(0deg, var(--primary-color), transparent);
+  }
 
 .header_content {
     margin: auto;
@@ -33,7 +46,6 @@
 .header_title {
     text-align: center;
     font-size: 3rem;
-    margin: 0;
 }
 
 .header_title-light {
@@ -42,10 +54,21 @@
     font-size: 2rem;
 }
 
+.header .text-small {
+    max-width: 300px;
+    text-align: center;
+}
+
+.header_button {
+    animation: wiggle 2.2s linear infinite;
+}
+
+/* Divider */
+
 .divider {
     width: 70%;
-    max-width: 700px;
-    height: 5px;
+    max-width: 43.75rem;
+    height: 0.3125rem;
     background: var(--divider-bg-color);
   }
 
@@ -67,7 +90,6 @@
 .offer_price-small {
     font-size: 1rem;
     font-weight: 300;
-    margin: 0;
 }
 
 .text-small {
@@ -77,20 +99,244 @@
     margin-top: 0;
 }
 
-/* Main */
+.title {
+    font-size: 2rem;
+    font-weight: 500;
+}
 
-main {
+/* Subscription */
+
+.subscription {
+    background: url("../imgs/background-movies-series.png") no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.subscription_plans {
+    display: flex;
+    justify-content: space-around;
+    gap: 5rem;
+    margin: 2.5rem 0;
+    perspective: 2000px;
+    perspective-origin: top;
+}
+  
+.subscription_card {
+    background: var(--card-bg-color);
+    padding: 2.5rem 3.75rem;
+    border-radius: 8px;
+    display: flex;
+    min-height: 37.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 1s ease-in-out;
+}
+  
+.subscription_plans:has(.subscription_card:nth-child(1):hover) .subscription_card:nth-child(2) {
+    transform: rotateY(-45deg);
+}
+  
+.subscription_plans:has(.subscription_card:nth-child(2):hover) .subscription_card:nth-child(1) {
+    transform: rotateY(45deg);
+  }
+  
+.subscription_description {
+    text-align: left;
+    list-style: none;
+    font-size: 1.25rem;
+    margin-bottom: 0.875rem;
+    padding-left: 0.875rem;
+}
+  
+.subscription_price {
+    font-size: 2rem;
+    font-family: "Raleway", sans-serif;
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+  
+.subscription_price .text-small {
+    color: var(--text-color);
+}
+  
+.subscription_description::marker {
+    content: "+";
+    font-size: 2rem;
+    margin: 0 8px 0 0;
+}
+  
+.subscription_plan {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+/* Contents */
+
+.contents {
+    margin: 100px auto;
+  }
+  
+  .contents_container {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+  
+  .contents_card {
+    border-radius: 1rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid transparent;
+    transition: transform 0.8s, background 0.8s, border 1s;
+  }
+  
+  .contents_card:hover {
+    transform: scale(1.05);
+    border: 2px solid var(--tertiary-color);
+  }
+  
+  .contents_card:hover .contents_image {
+    opacity: 0;
+  }
+  
+  .contents_image {
     width: 100%;
-    height: 134.171rem;
-}
+    object-fit: cover;
+    object-position: center;
+    transition: opacity 2s;
+  }
 
-/* Footer */
+  .contents_card:nth-child(1):hover {
+    background-image: url("../imgs/hbo-hover_0.webp");
+  }
 
-.footer {
-    width: 72rem;
-    height: 9.837rem;
-    margin: 0 10rem;
-    padding: 1.5rem;
+  .contents_card:nth-child(2):hover {
+    background-image: url("../imgs/MAX-Hover.webp");
+  }
+  
+  .contents_card:nth-child(3):hover {
+    background-image: url("../imgs/DC-Hover.webp");
+  }
+  
+  .contents_card:nth-child(4):hover {
+    background-image: url("../imgs/WB-Hover.webp");
+  }
+  
+  .contents_card:nth-child(5):hover {
+    background-image: url("../imgs/CN-Hover.png");
+  }
+  
+  .contents_card:nth-child(6):hover {
+    background-image: url("../imgs/UCL-Hover.webp");
+  }
 
-    background-color: gray;
-}
+    /* Animations */
+  
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    
+    @keyframes wiggle {
+      0%,
+      10% {
+        transform: rotate(0);
+      }
+      15% {
+        transform: rotate(-15deg);
+      }
+      20% {
+        transform: rotate(10deg);
+      }
+      25% {
+        transform: rotate(-10deg);
+      }
+      30% {
+        transform: rotate(10deg);
+      }
+      35% {
+        transform: rotate(-10deg);
+      }
+      40%,
+      100% {
+        transform: rotate(0);
+      }
+    }
+
+  /* Media Queries */
+
+  @media screen and (max-width: 1200px) {
+    .subscription_plans {
+      gap: 40px;
+    }
+  
+    .contents_container {
+      gap: 32px;
+    }
+  }
+  
+  @media screen and (max-width: 1140px) {
+    .subscription_plans {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .subscription_card {
+      max-width: 600px;
+    }
+  }
+  
+  @media screen and (max-width: 800px) {
+    .contents_container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .subscription_price {
+      font-size: 1.5rem;
+    }
+  
+    .subscription_description {
+      font-size: 1rem;
+    }
+  
+    .subscription_plan {
+      flex-direction: column;
+      justify-content: center;
+    }
+  
+    .subscription_card {
+      padding: 40px;
+    }
+  
+    .contents_container {
+      grid-template-columns: repeat(6, 100%);
+      grid-auto-flow: column;
+      overflow: auto hidden;
+    }
+  }
+  
+  @media (pointer: coarse) {
+    .contents_card:hover {
+      transform: none;
+    }
+  
+    .subscription_plans:has(.subscription_card:nth-child(1):hover) .subscription_card:nth-child(2), 
+    .subscription_plans:has(.subscription_card:nth-child(2):hover) .subscription_card:nth-child(1) {
+      transform: none;
+    }
+  }
+  
+

@@ -2,7 +2,7 @@
 
 ![Status](https://img.shields.io/badge/STATUS-FINALIZADO-brightgreen?style=flat&labelColor=555555&color=2ecc71)
 
-Projeto em desenvolvimento para o último módulo do curso Formação CSS Web Developer da DIO, **Refinando os Estilos CSS**. O objetivo é aplicar e consolidar os aprendizados sobre transições e animações no CSS, além do uso de pseudo-elementos e pseudo-classes.
+Projeto desenvolvido para o último módulo do curso Formação CSS Web Developer da DIO, **Refinando os Estilos CSS**. O objetivo é aplicar e consolidar os aprendizados sobre transições e animações no CSS, além do uso de pseudo-elementos e pseudo-classes.
 
 ## 📌 Sobre o desafio
 

@@ -1,6 +1,6 @@
 # Desafio - Clonando o Site da HBO Max com Animações em HTML e CSS
 
-![Status](https://img.shields.io/badge/STATUS-EM%20DESENVOLVIMENTO-brightgreen?style=flat&labelColor=555555&color=2ecc71)
+![Status](https://img.shields.io/badge/STATUS-FINALIZADO-brightgreen?style=flat&labelColor=555555&color=2ecc71)
 
 Projeto em desenvolvimento para o último módulo do curso Formação CSS Web Developer da DIO, **Refinando os Estilos CSS**. O objetivo é aplicar e consolidar os aprendizados sobre transições e animações no CSS, além do uso de pseudo-elementos e pseudo-classes.
 
@@ -24,8 +24,9 @@ O projeto consiste em recriar a **página inicial** e a **página de login** da 
 
 ## 📸 Status Atual
 
-🚀 Em desenvolvimento! 🚀 
+<img src="assets/imgs/inicial.jpeg" alt="Print da Página Inicial do projeto."><br><hr><br>
+<img src="assets/imgs/login.jpeg" alt="Print da Página de Login do projeto.">
 
 ## 🔗 Links
 
-🚧 Em breve...😉 🚧
+- https://matheus-flcruz.github.io/desafio-css-hbomax/
